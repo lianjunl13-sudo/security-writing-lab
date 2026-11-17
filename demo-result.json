@@ -1,0 +1,14 @@
+{
+  "unapproved_store": "rejected",
+  "model_approved_flag": "rejected",
+  "traversal_read": "rejected",
+  "approved_store": {
+    "status": "stored",
+    "path": "article.txt"
+  },
+  "approval_reuse": "rejected",
+  "read_back": {
+    "status": "read",
+    "content": "A synthetic safe draft."
+  }
+}

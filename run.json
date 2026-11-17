@@ -1,0 +1,56 @@
+{
+  "ran_at": "2026-11-17T23:23:45+08:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-14.6.1-arm64-arm-64bit",
+  "commands": [
+    [
+      "python3",
+      "-m",
+      "unittest",
+      "-v",
+      "test_experiment.py"
+    ],
+    [
+      "python3",
+      "experiment.py"
+    ]
+  ],
+  "tests_returncode": 0,
+  "demo_returncode": 0,
+  "tests_count": 29,
+  "tests_passed": true,
+  "main_demo_lines": 35,
+  "sha256": {
+    "experiment.py": "6fe8141686ed53af5b8d532e3a89f54758392ff47be815183003e1b0173172cb",
+    "test_experiment.py": "e7e5e366c15f0f6da1c660c7ef78f87de7406f134be3cccdb5f11305f1f0b61f"
+  },
+  "scope": "Synthetic local POSIX filesystem experiment only; no model or network; not MCP protocol conformance.",
+  "guarantees_tested": [
+    "allowlisted tools and strict schemas",
+    "principal-scoped roots",
+    "path traversal and symlink rejection including final-component symlink substitution",
+    "trusted exact-argument approval capabilities",
+    "principal/path/content binding and mutable argument snapshot",
+    "one-shot approval under 8 threads",
+    "atomic no-clobber publication under 2 competing approvals",
+    "destination file and symlink races",
+    "temporary file cleanup on controlled I/O failures",
+    "UTF-8/size/regular-file checks and mode0600"
+  ],
+  "limitations": [
+    "The host, approval issuer, principal mapping and process memory are trusted. Do not expose approve_store or approval tokens as model tools/data.",
+    "Root trees must be service-owned without untrusted OS writers. This does not sandbox a hostile local user, privileged attacker, hard links, bind mounts or concurrent directory moves outside an opened root.",
+    "Approvals are held in memory, have no expiration/durable audit and are lost on restart; I/O failure consumes the token.",
+    "Atomic publication uses local POSIX hard-link no-clobber semantics; Windows and network/distributed filesystems are not validated.",
+    "No power-loss/crash persistence, HTTP authentication, real MCP server/client, prompt-injection benchmark or production security certification."
+  ],
+  "executed_at": "2026-11-17T23:23:45+08:00",
+  "tests_exit_code": 0,
+  "demo_exit_code": 0,
+  "article_sha256": "eff786a2a7dabfdf1ba4ff214cd7e6077f6ca91f98957114c3eb08c7ed3d357b",
+  "code_sha256": "6fe8141686ed53af5b8d532e3a89f54758392ff47be815183003e1b0173172cb",
+  "tests_sha256": "e7e5e366c15f0f6da1c660c7ef78f87de7406f134be3cccdb5f11305f1f0b61f",
+  "article_binding_note": "正文复核绑定到已有运行的相同代码版本；非重新执行实验",
+  "article_bound_at": "2026-11-18T00:05:53+08:00",
+  "public_copy_note": "命令中的本机Python绝对路径替换为python3；执行时间、结果及源码哈希保持原记录。只发布代码和证据，不发布未投稿正文。"
+}
